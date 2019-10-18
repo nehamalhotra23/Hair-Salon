@@ -12,10 +12,10 @@ _This MVC application allows the user to add list of Hair stylists at the salon 
 
 * _Git Clone https://github.com/nehamalhotra23/Hair-Salon.git_
 * _Run "Dotnet Restore" in terminal_
-* _CREATE DATABASE HairSalon_
-* _USE HairSalon_
+* _CREATE DATABASE Neha_Malhotra_
+* _USE Neha_Malhotra_
 * _CREATE TABLE Stylist (StylistId serial PRIMARY KEY, name VARCHAR(255))_
-* _CREATE TABLE Clients (ClientId serial PRIMARY KEY, name VARCHAR(255), StylistId(INT))_
+* _CREATE TABLE Client (ClientId serial PRIMARY KEY, name VARCHAR(255), StylistId(INT))_
 * _Run Dotnet watch run_
 * _Navigate to localhost:5000_
 
