@@ -21,6 +21,17 @@ namespace HairSalon.Controllers
             List<Client> model = _db.Client.Include(client => client.Stylist).ToList(); 
             return View(model);
         }
+        [HttpPost]
+        public ActionResult Index(string searchType, string value)
+        {
+            List<Client> model = _db.Client.Include(clients => clients.Stylist).ToList();
+            if(searchType == "stylists")
+            {
+                int stylists = Int32.Parse(value);
+                model  = _db.Client.Where(client => client.StylistId == stylists).Select(stylist => stylist).ToList();
+            }
+            return View(model);
+       }      
 
         public ActionResult Create()
         {
