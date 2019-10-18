@@ -4,6 +4,7 @@
 
 @using HairSalon.Models;
 @model List<HairSalon.Models.Stylist>;
+<div class="container">
 
 <h1>Stylists</h1>
 
@@ -14,8 +15,9 @@
 
 @foreach (Stylist stylist in Model)
 {
-  <li>@Html.ActionLink($"{stylist.Name}", "Details", new { id = stylist.StylistId })</li>
+  <ol>@Html.ActionLink($"{stylist.Name}", "Details", new { id = stylist.StylistId })</ol>
 }
 <p>@Html.ActionLink("See the list of their Clients", "Index", "Client")</p>
 <p>@Html.ActionLink("Add new Stylist", "Create")</p>
 <p>@Html.ActionLink("Home", "Index", "Home")</p>
+</div>
