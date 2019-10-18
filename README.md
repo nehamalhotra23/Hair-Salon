@@ -16,6 +16,8 @@ _This MVC application allows the user to add list of Hair stylists at the salon 
 * _USE HairSalon_
 * _CREATE TABLE Stylist (StylistId serial PRIMARY KEY, name VARCHAR(255))_
 * _CREATE TABLE Clients (ClientId serial PRIMARY KEY, name VARCHAR(255), StylistId(INT))_
+* _Run Dotnet watch run_
+* _Navigate to localhost:5000_
 
 ## Known Bugs
 
