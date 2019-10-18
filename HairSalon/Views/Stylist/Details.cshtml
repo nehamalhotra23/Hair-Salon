@@ -5,18 +5,19 @@
 @using HairSalon.Models;
 @model HairSalon.Models.Stylist;
 
+
 <h2>Stylist Details</h2>
 <hr />
 <h3>@Html.DisplayNameFor(model => model.Name): 
 @Html.DisplayFor(model => model.Name)</h3>
 
 <ul>
-@if (@Model.Clients.Count == 0)
+@if (@Model.Client.Count == 0)
 {
   <p>no client found</p>
 }
 
-@foreach (Client client in @Model.Clients)
+@foreach (Client client in @Model.Client)
 {
   <li>Description: @client.Name</li>
 }
