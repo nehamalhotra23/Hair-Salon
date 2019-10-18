@@ -15,8 +15,7 @@
 
 @foreach (Client client in Model)
 {
-  <li>Client: @Html.ActionLink($"{client.Name}", "Details", new { id = client.ClientId })  
-  <br>Stylist: @client.Stylist.Name</li>
+  <li>Client: @Html.ActionLink($"{client.Name}", "Details", new { id = client.ClientId })  ||   Stylist: <strong>@client.Stylist.Name</strong></li>
  
 }
 
@@ -38,7 +37,9 @@
     </select>
     <button name="searchType" value="stylists" type='submit'>Search</button>
 </form>
-
+<hr>
 <p>@Html.ActionLink("Show all Client", "Index")</p>
+<hr>
 <p>@Html.ActionLink("Add new client", "Create")</p>
+<hr>
 <p>@Html.ActionLink("Home", "Index", "Home")</p>
