@@ -9,7 +9,7 @@
 @using (Html.BeginForm())
 {
     @Html.LabelFor(model => model.Name)
-    @Html.TextBoxFor(model => model.Name, new { @class="form-control"})
+    @Html.TextBoxFor(model => model.Name)
     <hr>
     <input type="submit" value="Add new Stylist" />
 }
