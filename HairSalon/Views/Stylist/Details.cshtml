@@ -13,8 +13,6 @@
  @Html.DisplayNameFor(model => model.StylistId): 
  @Html.DisplayFor(model => model.StylistId)</h3>
 
-
-
 @if (@Model.Client.Count == 0)
 {
   <p>no items found</p>
@@ -23,11 +21,10 @@
 @foreach (Client client in @Model.Client)
 {
   <h1>Name Of Client</h1> <hr>
-  @Html.ActionLink($"{client.Name}", "Details", new { id = client.ClientId })
+  @Html.ActionLink($"{client.Name}", "Details", "Client", new { id = client.ClientId })
 } 
-
 <hr>
-<p>@Html.ActionLink("Add new Stylist", "Create")</p>
-<p>@Html.ActionLink("Add new client", "Create")</p>
+<p>@Html.ActionLink("Add new Client", "Create", "Client", new { id = Model.StylistId })</p>
+
 <p>@Html.ActionLink("Home", "Index", "Home")</p>
 </div>
