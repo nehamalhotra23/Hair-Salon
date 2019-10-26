@@ -1,12 +1,13 @@
 @{
   Layout = "_Layout";
 }
-
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'> 
+<link rel="stylesheet" type="text/css" runat="server" media="screen" href="~/css/Stylesheet.css"/>
 @using HairSalon.Models;
 @model List<HairSalon.Models.Stylist>;
-<div class="container">
+<div class="container" id="StylistDetail">
 
-<h1>Stylists</h1>
+<h1>Name Of Stylists</h1>
 
 @if (@Model.Count == 0)
 {

@@ -1,8 +1,10 @@
 @{
   Layout = "_Layout";
 }
-<div class="container">
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'> 
+<link rel="stylesheet" type="text/css" runat="server" media="screen" href="~/css/Stylesheet.css"/>
+<div class="container" id="main">
  <img src="http://www.crimsonphilly.com/wp-content/uploads/sites/989/2015/03/slider1.jpg" alt="picture of hair salon" height="200" width="600">
 <h1>Welcome to the Eau Claire's Salon</h1>
-<p>@Html.ActionLink("See  the list of all stylists", "Index", "Stylist")</p>
+<p>@Html.ActionLink("See  the list of all Stylists", "Index", "Stylist")</p>
 </div>
